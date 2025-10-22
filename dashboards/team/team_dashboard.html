@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Dashboard</title>
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1>Team Dashboard</h1>
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="../../index.html" onclick="localStorage.removeItem('username')">Logout</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+<div class="dashboard-container">
+    <h2>Welcome, {{username}}!</h2>
+    <div class="dashboard-grid">
+        <a href="manage_players.html" class="card">
+            <h3>Manage Players</h3>
+            <p>Add, edit, or remove team players...</p>
+        </a>
+        <a href="team_schedule.html" class="card">
+            <h3>Team Schedule</h3>
+            <p>Training sessions and match schedule...</p>
+        </a>
+        <a href="team_stats.html" class="card">
+            <h3>Team Stats</h3>
+            <p>Goals, wins, and other team statistics...</p>
+        </a>
+    </div>
+</div>
+</main>
+
+<footer>
+    <p>&copy; 2025 Football Management System</p>
+</footer>
+
+<script>
+const username = localStorage.getItem('username') || 'Guest';
+document.querySelector('.dashboard-container h2').textContent = `Welcome, ${username}!`;
+</script>
+</body>
+</html>

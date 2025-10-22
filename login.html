@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1>Football Management System</h1>
+        <nav>
+            <a href="index.php">Home</a>        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="form-container">
+        <h2>Login</h2>
+        <form id="loginForm" action="php/login.php" method="POST">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="role">Role</label>
+            <select id="role" name="role" required>
+                <option value="user">User</option>
+                <option value="player">Player</option>
+                <option value="team">Team</option>
+                <option value="admin">Admin</option>
+            </select>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="register.php">Register here</a></p>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 Football Management System</p>
+</footer>
+</body>
+</html>

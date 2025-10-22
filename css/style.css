@@ -1,0 +1,309 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* Colors */
+:root {
+    --primary-purple: #1B1464;
+    --accent-yellow: #FFB400;
+    --white: #FFFFFF;
+    --dark-gray: #333333;
+    --pl-purple: #37003c; /* Premier League color */
+    --pl-pink: #d0008f;   /* Premier League hover accent */
+}
+
+/* Body */
+body {
+    background-color: var(--white);
+    color: var(--dark-gray);
+}
+
+/* Header / Navbar */
+header {
+    background-color: var(--primary-purple);
+    color: var(--white);
+    padding: 20px 0;
+}
+
+header .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: var(--accent-yellow);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #f2f2f2;
+}
+
+.hero h2 {
+    color: var(--primary-purple);
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons .btn {
+    padding: 12px 30px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.hero-buttons .btn {
+    background-color: var(--primary-purple);
+    color: var(--white);
+}
+
+.hero-buttons .btn:hover {
+    background-color: var(--accent-yellow);
+    color: var(--primary-purple);
+}
+
+.hero-buttons .btn-secondary {
+    background-color: var(--accent-yellow);
+    color: var(--primary-purple);
+}
+
+.hero-buttons .btn-secondary:hover {
+    background-color: var(--primary-purple);
+    color: var(--white);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-purple);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 30px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.form-container h2 {
+    color: var(--primary-purple);
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.form-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-container input,
+.form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.form-container select {
+    background-color: #fff;
+    color: #333;
+    appearance: none;
+    background-image: url('images/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    padding-right: 30px;
+}
+
+.form-container select:focus,
+.form-container input:focus {
+    outline: none;
+    border-color: var(--primary-purple);
+    box-shadow: 0 0 5px rgba(27, 20, 100, 0.5);
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-purple);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: var(--accent-yellow);
+    color: var(--primary-purple);
+}
+
+.form-container p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.form-container p a {
+    color: var(--primary-purple);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-container p a:hover {
+    color: var(--accent-yellow);
+}
+
+/* Dashboard */
+.dashboard-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.dashboard-container h2 {
+    color: var(--primary-purple);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.dashboard-grid a.card,
+.dashboard-grid .card {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-grid a.card:hover,
+.dashboard-grid .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.dashboard-grid a.card h3,
+.dashboard-grid .card h3 {
+    color: var(--primary-purple);
+    margin-bottom: 15px;
+}
+
+/* Fixtures Page */
+.fixtures-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.fixtures-section h2 {
+    color: var(--pl-purple);
+    margin-bottom: 40px;
+}
+
+.fixtures-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.fixture-card {
+    background: #f8f8f8;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fixture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.fixture-card h3 {
+    color: var(--pl-purple);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.fixture-card p {
+    color: #333;
+    margin: 5px 0;
+    font-size: 16px;
+}   
+.fixture-card .btn {
+    background-color: var(--pl-purple);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    align-self: center; /* centers button inside card */
+    margin-top: auto;   /* pushes button to bottom of card */
+    font-weight: bold;
+    text-decoration: none; /* for <a> tag */
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.fixture-card .btn:hover {
+    background-color: var(--pl-pink);
+}
